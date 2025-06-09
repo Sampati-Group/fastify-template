@@ -1,0 +1,13 @@
+{
+    "watch": [
+        "*.ts",
+        "models/*.ts"
+    ],
+    "ext": "ts",
+    "ignore": [
+        "node_modules",
+        "dist",
+        "logs"
+    ],
+    "exec": "ts-node ./main.ts"
+}

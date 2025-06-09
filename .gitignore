@@ -1,0 +1,34 @@
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Environment variables
+.env
+
+# TypeScript build output
+dist/
+build/
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Editor and OS files
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
