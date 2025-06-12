@@ -6,6 +6,7 @@ import pdfPlugin from './plugin/pdf.plugin';
 import pdfRoutes from './routes/pdf.routes';
 import emailPlugin from './plugin/email.plugin';
 import mailRoutes from './routes/mail.routes';
+import testRoutes from './routes/test.routes';
 
 (async () => {
   try {
@@ -14,12 +15,12 @@ import mailRoutes from './routes/mail.routes';
 
     app.register(pdfPlugin);
     app.register(emailPlugin);
-    
-    // Register routes
+
+    app.register(testRoutes, { prefix: '/api' });
     app.register(pdfRoutes, { prefix: '/api/pdf' });
     app.register(mailRoutes, { prefix: '/api/mail' });
     const port = Number(process.env.PORT) || 3000;
-    
+
     await app.listen({ port });
     app.log.info(`Server running at ${app.server.address()}`);
   } catch (error) {
